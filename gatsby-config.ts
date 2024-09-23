@@ -2,9 +2,9 @@ import type { GatsbyConfig } from "gatsby"
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
-    title: `John Smith's Software Engineering Portfolio`,
-    name: `John Smith`,
+    siteUrl: `https://gregathee.github.io/`,
+    title: `Greg Brandt's Software Engineering Portfolio`,
+    name: `Greg Brandt`,
     bannerLogo: `/icon.png`,
     description: `Software Engineer and Marine Corps Veteran leveraging 7 years of experience in designing and developing robust software solutions, specializing in 3D data visualization, game development, and automation. Adept at leveraging languages such as Python, C++, and C# to build scalable applications and enhance user experiences. Proven track record of optimizing performance and ensuring high-quality code through rigorous testing and efficient data management. Strong collaborator with a history of successfully leading interdisciplinary teams and mentoring peers. Committed to driving innovation and improving processes through continuous learning and adaptation. `,
     linkedin: `https://www.linkedin.com/in/gregorybusmc/`,
