@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 interface BodyProps {bannerLogo: string;}
 
-const Body: React.FC<BodyProps> = ({ bannerLogo }) => {
+const Body: React.FC<BodyProps> = () => {
   return (
       <BodyContainer>
         <HeroSection />

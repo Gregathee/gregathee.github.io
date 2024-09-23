@@ -40,7 +40,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
     <ThemeProvider theme={theme}>
       <SEO title={data.site.siteMetadata.title} description={data.site.siteMetadata.description} />
       <Layout>
-        <Body bannerLogo={data.site.siteMetadata.bannerLogo} />
+        <Body bannerLogo={"icon.png"} />
       </Layout>
     </ThemeProvider>
   );
