@@ -9,7 +9,6 @@ const NavHeader: React.FC<{ siteName: string }> = ({ siteName }) => {
       <Navigation>
         <NavLink to="/#projects">Games/Projects</NavLink>
         <NavLink to="/#about">About</NavLink>
-        <NavLink to="/#contact">Contact</NavLink>
       </Navigation>
     </Header>
   );

@@ -13,13 +13,10 @@ const SEO: React.FC<Props> = ({ title, description }) => {
       <title>{title}</title>
       <meta name="description" content={description || ""} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      {/* Include Font Awesome CSS */}
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-      {/* Custom styles */}
       <link rel="stylesheet" type="text/css" href="style.css" />
       <meta name="theme-color" content="#fafafa" />
 
-      {/* Google Analytics Tracking Code */}
       <script>
         {`
           window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
