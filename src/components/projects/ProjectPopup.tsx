@@ -6,7 +6,7 @@ type ProjectPopupProps = {
   isOpen: boolean;
   handleClose: () => void;
   title: string;
-  technologies: string; // New prop for technologies
+  technologies: string; 
   description: string;
   children?: React.ReactNode;
 };
@@ -14,17 +14,17 @@ type ProjectPopupProps = {
 const TitleContainer = styled.div`
     position: sticky;
     top: 0;
-    background-color: white; // Ensures the title blocks content behind it
-    z-index: 10; // Higher z-index to ensure it's above other content
-    padding: 10px 0; // Give some vertical space for better appearance
+    background-color: white; 
+    z-index: 10; 
+    padding: 10px 0; 
     display: flex;
-    justify-content: space-between; // Space for title and close button
-    align-items: center; // Vertically center the items
+    justify-content: space-between;
+    align-items: center;
 `;
 
 const TitleStyled = styled.h2`
   color: red;
-  margin: 0; // Remove any default margin
+  margin: 0; 
 `;
 
 const ContentContainer = styled.div`
@@ -65,11 +65,11 @@ const ProjectPopup: React.FC<ProjectPopupProps> = ({ isOpen, handleClose, title,
     backgroundColor: '#fff',
     padding: '20px',
     borderRadius: '5px',
-    width: 'auto', // This will make the width fit the content
-    height: 'auto', // This will make the height fit the content
-    maxHeight: '90vh', // Still keep a max height for very long content
-    maxWidth: '90%', // To ensure it doesn't get too wide on large screens
-    overflowY: 'auto', // In case content exceeds maxHeight
+    width: 'auto', 
+    height: 'auto', 
+    maxHeight: '90vh', 
+    maxWidth: '90%', 
+    overflowY: 'auto', 
     position: 'relative',
   };
 

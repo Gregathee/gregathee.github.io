@@ -5,6 +5,8 @@ import {graphql, useStaticQuery} from "gatsby";
 
 const ContactSection: React.FC = () => {
   const data = useStaticQuery(graphql` query { site { siteMetadata { linkedin, github } } }`);
+  if (!data) return <div>Failed to load site metadata</div>;
+  
   return (
       <ContactContainer>
         <Button href="/resume.pdf" bgColor="#880088" target="_blank" rel="noopener noreferrer"> Resume </Button>

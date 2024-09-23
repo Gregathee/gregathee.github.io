@@ -8,6 +8,8 @@ interface LayoutProps { children: React.ReactNode; }
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const data = useStaticQuery(graphql`query { site { siteMetadata { name } } }`);
 
+  if (!data) return <div>Failed to load site metadata</div>;
+
   return (
     <LayoutContainer>
       <NavHeader siteName={data.site.siteMetadata.name} />
@@ -20,13 +22,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 export default Layout;
 
 const LayoutContainer = styled.div`
-  background-color: black; 
-  font-family: 'Montserrat', sans-serif; // Update with your chosen font
+  background-color: ${({ theme }) => theme.colors.background}; 
+  font-family: ${({ theme }) => theme.fonts.body};
 `;
 
 const Footer = styled.footer`
-  background-color: #222;
-  color: #f0f0f0;
-  padding: 1rem;
-  text-align: center;
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.secondary};
+    padding: ${({ theme }) => theme.spacing.medium};
+    text-align: center;
 `;

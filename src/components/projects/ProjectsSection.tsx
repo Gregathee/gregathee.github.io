@@ -6,15 +6,9 @@ import Bubble from "../Bubble";
 import ProjectA from "./ProjectA";
 
 const ProjectsSection: React.FC = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          bannerLogo
-        }
-      }
-    }
-  `);
+  const data = useStaticQuery(graphql` query { site { siteMetadata { bannerLogo } } } `);
+
+  if (!data) return <div>Failed to load site metadata</div>;
 
   return (
     <Bubble maxWidth={"auto"}>

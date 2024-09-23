@@ -8,13 +8,11 @@ interface BodyProps {bannerLogo: string;}
 
 const Body: React.FC<BodyProps> = ({ bannerLogo }) => {
   return (
-    <>
       <BodyContainer>
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
       </BodyContainer>
-    </>
   );
 };
 

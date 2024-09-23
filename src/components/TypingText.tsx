@@ -30,6 +30,7 @@ const TypingText: React.FC<TypingTextProps> = ({children}) =>
   }
 
   const getTextWidth = (text: string) => {
+    if (typeof document === 'undefined') {return 0;}
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
     if (!context) {

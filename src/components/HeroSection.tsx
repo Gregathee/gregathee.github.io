@@ -10,6 +10,8 @@ interface HeroSectionProps {}
 
 const HeroSection: React.FC<HeroSectionProps> = () => {
   const data = useStaticQuery(graphql` query { site { siteMetadata { name, description, bannerLogo } } }`);
+  if (!data) return <div>Failed to load site metadata</div>;
+  
   return (
     <HeroContainer>
       <Banner src={data.site.siteMetadata.bannerLogo}/>

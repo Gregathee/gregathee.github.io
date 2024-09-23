@@ -5,10 +5,10 @@ import {Link} from 'gatsby';
 const NavHeader: React.FC<{ siteName: string }> = ({ siteName }) => {
   return (
     <Header>
-      <Link to="/">{siteName}</Link>
+      <StyledLink to="/">{siteName}</StyledLink>
       <Navigation>
-        <NavLink to="/#projects">Games/Projects</NavLink>
-        <NavLink to="/#about">About</NavLink>
+        <StyledLink to="/#projects">Games/Projects</StyledLink>
+        <StyledLink to="/#about">About</StyledLink>
       </Navigation>
     </Header>
   );
@@ -17,8 +17,8 @@ const NavHeader: React.FC<{ siteName: string }> = ({ siteName }) => {
 export default NavHeader;
 
 const Header = styled.header`
-  background-color: #222; // Or a deep gray
-  padding: 1.5rem;
+  background-color: ${({ theme }) => theme.colors.primary};
+  padding: ${({ theme }) => theme.spacing.large};
   position: sticky;
   top: 0;
   z-index: 1;
@@ -30,16 +30,16 @@ const Header = styled.header`
 
 const Navigation = styled.nav`
   display: flex;
-  gap: 1.5rem;
+  gap: ${({ theme }) => theme.spacing.large};
 `;
 
-const NavLink = styled(Link)`
+const StyledLink = styled(Link)`
   text-decoration: none;
-  color: #f0f0f0; // Light color for dark background
+  color: ${({ theme }) => theme.colors.secondary};
   transition: color 0.2s;
 
   &:hover,
   &.active {
-    color: #ff0000; // Vibrant red on hover/active
+    color: ${({ theme }) => theme.colors.accent};
   }
 `;
