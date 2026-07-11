@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=500 height=800 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=450 height=1050 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -59,7 +59,7 @@
         frameworkUrl: buildUrl + "/Mergy Dergy.framework.js",
         codeUrl: buildUrl + "/Mergy Dergy.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
+        companyName: "Gregathee Games",
         productName: "Mergy Dergy",
         productVersion: "1.0",
         showBanner: unityShowBanner,
@@ -104,8 +104,8 @@
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "500px";
-        canvas.style.height = "800px";
+        canvas.style.width = "450px";
+        canvas.style.height = "1050px";
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
